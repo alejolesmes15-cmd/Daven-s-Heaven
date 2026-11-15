@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://c68g0p5a7vscl"]
+
+[ext_resource type="Script" uid="uid://btcp46gejb0cl" path="res://sandia.gd" id="1_s11ak"]
+[ext_resource type="Texture2D" uid="uid://dssp1xsceap4m" path="res://Sandia.png" id="2_u4sst"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i23pq"]
+size = Vector2(240, 112)
+
+[node name="sandia" type="Area2D" unique_id=41870968]
+script = ExtResource("1_s11ak")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=531533961]
+position = Vector2(-4, 5)
+shape = SubResource("RectangleShape2D_i23pq")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=232070564]
+texture = ExtResource("2_u4sst")

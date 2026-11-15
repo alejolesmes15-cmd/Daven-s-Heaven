@@ -1,0 +1,65 @@
+[gd_scene format=3 uid="uid://ceno7fat2uanf"]
+
+[ext_resource type="Script" uid="uid://jk8ll8bqkhgi" path="res://enemy.gd" id="1_4gyqm"]
+[ext_resource type="Texture2D" uid="uid://dqo8obokgodk5" path="res://pixil-frame-0 (1).png" id="1_7k104"]
+[ext_resource type="Script" uid="uid://uaylruh48w84" path="res://hitbox.gd" id="3_qi2p4"]
+[ext_resource type="Script" uid="uid://bpe0t0kunkhxd" path="res://enemyhurtbox.gd" id="4_iifgy"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qi2p4"]
+atlas = ExtResource("1_7k104")
+region = Rect2(0, 36, 42, 28)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3yqyl"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qi2p4")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iifgy"]
+size = Vector2(32, 14)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qi2p4"]
+size = Vector2(37.5, 17)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lku51"]
+size = Vector2(38, 20)
+
+[node name="enemy" type="CharacterBody2D" unique_id=782706502]
+position = Vector2(-14, -20)
+collision_layer = 2
+collision_mask = 5
+script = ExtResource("1_4gyqm")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1620944840]
+texture_filter = 1
+position = Vector2(-1, 2.0000014)
+scale = Vector2(0.85714287, 0.8571429)
+sprite_frames = SubResource("SpriteFrames_3yqyl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1334303685]
+position = Vector2(0, 6)
+shape = SubResource("RectangleShape2D_iifgy")
+
+[node name="hitbox" type="Area2D" parent="." unique_id=1877080779]
+position = Vector2(-13, 22)
+collision_layer = 128
+collision_mask = 8
+script = ExtResource("3_qi2p4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hitbox" unique_id=1632799250]
+position = Vector2(11.75, -21.5)
+shape = SubResource("RectangleShape2D_qi2p4")
+debug_color = Color(0.9358325, 0.22717628, 0.30141547, 0.41960785)
+
+[node name="enemyhurtbox" type="Area2D" parent="." unique_id=1550113128]
+script = ExtResource("4_iifgy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemyhurtbox" unique_id=186575067]
+position = Vector2(-1, 0)
+shape = SubResource("RectangleShape2D_lku51")
+debug_color = Color(0.29853013, 0.619464, 0.317643, 0.41960785)

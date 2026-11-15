@@ -1,0 +1,74 @@
+[gd_scene format=3 uid="uid://doxacfiq728k6"]
+
+[ext_resource type="Script" uid="uid://cnb4kr44pnc8h" path="res://credits.gd" id="1_nm7lk"]
+[ext_resource type="AudioStream" uid="uid://dr5lodk55glf6" path="res://credits.mp3" id="2_c1t8d"]
+[ext_resource type="Texture2D" uid="uid://lmgmfwui6d13" path="res://galindoyrem.jpeg" id="3_g4wvt"]
+[ext_resource type="Texture2D" uid="uid://bli0hgs165luq" path="res://amorverdadero.png" id="4_pjc1l"]
+[ext_resource type="Texture2D" uid="uid://d0bu424m1ohac" path="res://agnes tachyon.jpeg" id="5_j6beo"]
+[ext_resource type="Texture2D" uid="uid://2t7vsva3q7pw" path="res://barajas.jpeg" id="6_5em78"]
+[ext_resource type="Texture2D" uid="uid://ctms8lfccnl6n" path="res://WhatsApp Image 2026-11-15 at 10.54.52 AM.jpeg" id="7_h30m1"]
+
+[node name="credits" type="Control" unique_id=1749236751]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_nm7lk")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1526662654]
+layout_mode = 0
+offset_right = 1153.0
+offset_bottom = 651.0
+color = Color(0, 0, 0, 1)
+
+[node name="Texto" type="Label" parent="." unique_id=2016984429]
+layout_mode = 0
+offset_right = 1153.0
+offset_bottom = 650.0
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1167576489]
+stream = ExtResource("2_c1t8d")
+autoplay = true
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1289351134]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("3_g4wvt")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="TextureRect2" type="TextureRect" parent="." unique_id=1344118966]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("4_pjc1l")
+expand_mode = 3
+
+[node name="Texto2" type="Label" parent="." unique_id=1587733184]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="TextureRect3" type="TextureRect" parent="." unique_id=934905741]
+layout_mode = 0
+offset_right = 900.0
+offset_bottom = 1600.0
+texture = ExtResource("5_j6beo")
+expand_mode = 4
+
+[node name="barajas" type="TextureRect" parent="." unique_id=2012450906]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("6_5em78")
+expand_mode = 4
+
+[node name="TextureRect4" type="TextureRect" parent="." unique_id=1482574931]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("7_h30m1")
+expand_mode = 4

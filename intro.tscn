@@ -1,0 +1,65 @@
+[gd_scene format=3 uid="uid://c3kyaphu1kl1w"]
+
+[ext_resource type="Texture2D" uid="uid://gpoxupbd87y5" path="res://Meme-Wallpaper-5.jpg" id="1_s2ta7"]
+[ext_resource type="Script" uid="uid://dgmuhwi52kpfc" path="res://intro.gd" id="1_u2rf6"]
+[ext_resource type="Texture2D" uid="uid://c147kvdld1lt1" path="res://davens haven.png" id="3_0a7ni"]
+[ext_resource type="Script" uid="uid://b184cfbl28xge" path="res://button.gd" id="3_7a8ye"]
+[ext_resource type="Texture2D" uid="uid://dagfv6e2rorgb" path="res://galindo.jpeg" id="4_0a7ni"]
+[ext_resource type="AudioStream" uid="uid://cqp5ggv68ywjp" path="res://09 En Barranquilla Me Quedo-louder.mp3" id="4_y72e6"]
+[ext_resource type="Script" uid="uid://dfriyto6e7sr" path="res://button_2.gd" id="7_y6ycx"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_j8km7"]
+particles_animation = true
+particles_anim_h_frames = 1
+particles_anim_v_frames = 1
+particles_anim_loop = false
+
+[node name="intro" type="Node2D" unique_id=1549768008]
+position = Vector2(1, 0)
+script = ExtResource("1_u2rf6")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=689120670]
+position = Vector2(581, 326.00003)
+scale = Vector2(0.60208327, 0.5416667)
+texture = ExtResource("1_s2ta7")
+
+[node name="Button" type="Button" parent="." unique_id=988589686]
+material = SubResource("CanvasItemMaterial_j8km7")
+offset_left = 348.0
+offset_top = 481.0
+offset_right = 484.0
+offset_bottom = 617.0
+text = "COMENSAR JUEGO"
+autowrap_mode = 3
+clip_text = true
+script = ExtResource("3_7a8ye")
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=751414445]
+position = Vector2(586.5, 332.5)
+scale = Vector2(1.0478516, 0.6044922)
+texture = ExtResource("3_0a7ni")
+
+[node name="MusicaSorpresa" type="AudioStreamPlayer2D" parent="." unique_id=1842117809]
+stream = ExtResource("4_y72e6")
+
+[node name="ImagenSorpresa" type="TextureRect" parent="." unique_id=939904879]
+visible = false
+offset_left = -176.0
+offset_top = -305.0
+offset_right = 1353.0
+offset_bottom = 975.0
+texture = ExtResource("4_0a7ni")
+
+[node name="Button2" type="Button" parent="." unique_id=356304705]
+material = SubResource("CanvasItemMaterial_j8km7")
+offset_left = 705.0
+offset_top = 482.0
+offset_right = 841.0
+offset_bottom = 618.0
+text = "CONTROLES"
+autowrap_mode = 3
+clip_text = true
+script = ExtResource("7_y6ycx")
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
+[connection signal="pressed" from="Button2" to="Button2" method="_on_pressed"]

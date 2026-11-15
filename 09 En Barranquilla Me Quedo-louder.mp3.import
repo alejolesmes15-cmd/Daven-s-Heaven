@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cqp5ggv68ywjp"
+path="res://.godot/imported/09 En Barranquilla Me Quedo-louder.mp3-db30b11bb39c90c02ba81bbd9f361df4.mp3str"
+
+[deps]
+
+source_file="res://09 En Barranquilla Me Quedo-louder.mp3"
+dest_files=["res://.godot/imported/09 En Barranquilla Me Quedo-louder.mp3-db30b11bb39c90c02ba81bbd9f361df4.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
